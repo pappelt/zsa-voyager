@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# QMK build artifacts
+*.bin
+*.hex
+*.uf2
+.build/
