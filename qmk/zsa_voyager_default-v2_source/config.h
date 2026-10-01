@@ -3,7 +3,7 @@
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define NO_AUTO_SHIFT_NUMERIC
-#define SERIAL_NUMBER "mXgzm/qmll5L"
+#define SERIAL_NUMBER "mXgzm/DzKKoP"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 3
 

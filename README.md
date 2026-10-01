@@ -7,11 +7,16 @@ Mein persönliches Keymap-Layout für das ZSA Voyager.
 - Geflasht wird über Oryx (Compile) und [Keymapp](https://www.zsa.io/flash).
 
 ## Bedienung
-- **`Alt+Tab` (Windows):** Alt-Combo halten (`D`+`F` oder `M`+`,`) und mit dem linken Daumen Tab tippen.
+- **`Alt+Tab` (Windows):** Alt-Combo halten (`D`+`F` oder `J`+`K`) und mit dem linken Daumen Tab tippen.
 - **`Cmd+Tab` (Mac, Layer 3):** Tab-Daumen halten (= `Cmd`) und links unten außen Tab tippen.
 - **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift).
 
 ## Änderungen
+
+### 2026-10-01: Ctrl auf dem Mac, Combos verlegt
+- **Layer 3 (Mac):** rechts unten außen jetzt `Left Ctrl` (vorher fiel sie auf `Cmd` durch); die extra eingetragenen `W`/`E` sind wieder durchlässig.
+- **Alt-Combo:** `M`+`,` → `J`+`K`.
+- **Tab-Combo:** `W`+`E` → `X`+`C` (`we` kommt beim Tippen zu oft vor).
 
 ### 2026-10-01: Tap Dances raus, Mac-Tab umgezogen
 - **Tap Dances auf `Z` und `/` entfernt:** wieder normale Tasten; großes `Z` und `?` kommen jetzt über Auto Shift (gleiches Timing wie alle anderen Buchstaben). `zz`/`//` per Doppeltipp und Right Alt fallen weg.
