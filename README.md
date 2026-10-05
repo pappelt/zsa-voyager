@@ -3,15 +3,25 @@
 Mein persönliches Keymap-Layout für das ZSA Voyager.
 
 - Bearbeitet in [Oryx](https://configure.zsa.io) und als QMK-Quellcode exportiert nach `qmk/zsa_voyager_default-v2_source/`.
-- Das Layout ist auf Windows ausgerichtet; für den Mac gibt es einen Zusatz-Layer (Layer 3).
+- Das Layout ist auf Windows ausgerichtet. Am Mac sind in den macOS-Einstellungen (Tastatur → Sondertasten, nur für das Voyager) `Ctrl` und `Cmd` vertauscht, damit dieselben Shortcuts funktionieren.
 - Geflasht wird über Oryx (Compile) und [Keymapp](https://www.zsa.io/flash).
 
 ## Bedienung
-- **`Alt+Tab` (Windows):** Alt-Combo halten (`D`+`F` oder `J`+`K`) und mit dem linken Daumen Tab tippen.
-- **`Cmd+Tab` (Mac, Layer 3):** Tab-Daumen halten (= `Cmd`) und links unten außen Tab tippen.
+- **Shortcut-Layer (Layer 3):** Combo `J`+`K` oder `D`+`F`. Antippen = Layer nur für die nächste Taste, halten = Layer solange gehalten.
+- **`Alt+Tab` (Windows):** `J`+`K` halten, auf Layer 3 `F` (= `Alt`) halten und mit dem linken Daumen Tab tippen.
+- **Tab ohne Daumen:** Combo `C`+`V`.
 - **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift).
 
 ## Änderungen
+
+### 2026-10-05: Shortcut-Layer statt Mac-Layer
+- **Mac-Layer entfernt:** Ctrl/Cmd werden jetzt in macOS getauscht statt in der Firmware. Die Umschalttasten `TO(3)`/`TO(0)` auf Layer 2 sind weg.
+- **Layer 3 = Shortcut-Layer** (linke Hand):
+  - Z-Reihe: `Ctrl+Z`, `Ctrl+X`, `Ctrl+C`, `Ctrl+V`
+  - A-Reihe: `Ctrl+A` auf `A`, `Alt` auf `F`
+  - Zahlenreihe: Zoom `Ctrl+-` auf `3`, `Ctrl+=` auf `4`, `Ctrl+0` auf `5`
+- **Combos:** `J`+`K` und `D`+`F` öffnen jetzt Layer 3 als One-Shot-Layer (vorher `Alt`); Tab-Combo `X`+`C` → `C`+`V`.
+- **LEDs:** eigene LED-Belegung für Layer 0 entfernt, überall läuft die normale RGB-Animation.
 
 ### 2026-10-01: Ctrl auf dem Mac, Combos verlegt
 - **Layer 3 (Mac):** rechts unten außen jetzt `Left Ctrl` (vorher fiel sie auf `Cmd` durch); die extra eingetragenen `W`/`E` sind wieder durchlässig.
