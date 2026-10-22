@@ -8,15 +8,20 @@ Mein persönliches Keymap-Layout für das ZSA Voyager.
 
 ## Bedienung
 - **Shortcut-Layer (Layer 3):** Combo `J`+`K` oder `D`+`F`. Antippen = Layer nur für die nächste Taste, halten = Layer solange gehalten.
-- **Modifier auf Layer 3 (Grundreihe):** `S` = Shift, `F`/`J` = Alt, `G`/`H` = Ctrl. Je nach Combo hat die freie Hand Alt unter dem Zeigefinger.
+- **Modifier auf Layer 3 (Grundreihe):** `S` = Shift, `F`/`J` = Alt, `G`/`H` = Ctrl, `K` = Win (Mac: Ctrl). Je nach Combo hat die freie Hand Alt unter dem Zeigefinger.
+- **Befehlspalette:** Layer 3, `P` = `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`), am besten mit `D`+`F`.
 - **`Alt+Tab` (Windows):** `J`+`K` halten, `F` (= Alt) halten und mit dem linken Daumen Tab tippen; mit `S` dazu rückwärts. Mit `D`+`F` liegt Alt auf `J`.
 - **`Cmd+Tab` (Mac):** `J`+`K` halten, `G` (Ctrl → durch macOS-Tausch `Cmd`) halten, Daumen-Tab tippen. Alternativ Daumen halten und Combo `C`+`V` (= Tab).
-- **Tab-Daumen (Tap Dance):** tippen = Tab, halten = Ctrl, zweimal tippen und halten = `Ctrl+Shift+P` (Befehlspalette).
+- **Tab-Daumen:** tippen = Tab, halten = Ctrl.
 - **Tab ohne Daumen:** Combo `C`+`V`.
 - **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift, Timeout 185 ms).
 - **Trackpad (Navigator):** Sobald das Trackpad bewegt wird, schaltet sich Layer 4 (Auto-Mouse) ein: `R`/`V` = Linksklick, `E`/`C` = Mittelklick, `W`/`X` = Rechtsklick.
 
 ## Änderungen
+
+### 2026-10-22: Tap Dance auf dem Tab-Daumen wieder raus
+- **Tab-Daumen:** zurück auf `MT(Ctrl, Tab)`. Der Tap Dance hat bei schnellem `Ctrl+C` & Co. als Tab gefeuert und jedes Tab verzögert.
+- **Layer 3:** `Ctrl+Shift+P` (Befehlspalette) jetzt auf `P`; `Win` neu auf `K`.
 
 ### 2026-10-22: Modifier auf der Grundreihe von Layer 3, Tap Dance auf dem Tab-Daumen
 - **Layer 3:** `Alt` von `G`/`H` nach `F`/`J`, `Ctrl` neu auf `G`/`H`, `Shift` neu auf `S`.
