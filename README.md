@@ -8,11 +8,24 @@ Mein persönliches Keymap-Layout für das ZSA Voyager.
 
 ## Bedienung
 - **Shortcut-Layer (Layer 3):** Combo `J`+`K` oder `D`+`F`. Antippen = Layer nur für die nächste Taste, halten = Layer solange gehalten.
-- **`Alt+Tab` (Windows):** `J`+`K` halten, auf Layer 3 `F` (= `Alt`) halten und mit dem linken Daumen Tab tippen.
+- **`Alt+Tab` (Windows):** `J`+`K` halten, auf Layer 3 `G` (= `Alt`) halten und mit dem linken Daumen Tab tippen. Mit `D`+`F` liegt Alt auf `H`.
+- **`Cmd+Tab` (Mac):** Daumen halten (Ctrl → durch macOS-Tausch `Cmd`) und Combo `C`+`V` (= Tab) drücken.
 - **Tab ohne Daumen:** Combo `C`+`V`.
-- **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift).
+- **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift, Timeout 185 ms).
+- **Trackpad (Navigator):** Sobald das Trackpad bewegt wird, schaltet sich Layer 4 (Auto-Mouse) ein: `R`/`V` = Linksklick, `E`/`C` = Mittelklick, `W`/`X` = Rechtsklick.
 
 ## Änderungen
+
+### 2026-10-22: Navigator Trackpad, Shortcut-Layer erweitert
+- **Navigator Trackpad** eingebunden (Oryx-Module `zsa/navigator_trackpad` und `zsa/automouse`).
+- **Layer 4 = Auto-Mouse-Layer:** Maustasten auf `W`/`E`/`R` und `X`/`C`/`V`, Rest durchlässig. Wird ab 5 Bewegungseinheiten automatisch aktiv.
+- **Layer 3 (Shortcuts) erweitert:**
+  - `Alt` von `F` auf `G` und `H` verlegt (je nach Combo erreichbar)
+  - `Ctrl+W` auf `W`, `Win+Tab` (Task-Ansicht) auf `B`
+  - links unten außen `Win+Shift+S` (Screenshot)
+  - links außen Q-Reihe `Ctrl+Alt+Shift+1`, links oben außen One-Shot-`Meh` (`Ctrl+Alt+Shift`)
+- **Auto Shift:** Timeout explizit auf 185 ms.
+- **LEDs:** eigene Farben für Layer 0, 1, 3 und 4.
 
 ### 2026-10-05: Shortcut-Layer statt Mac-Layer
 - **Mac-Layer entfernt:** Ctrl/Cmd werden jetzt in macOS getauscht statt in der Firmware. Die Umschalttasten `TO(3)`/`TO(0)` auf Layer 2 sind weg.
