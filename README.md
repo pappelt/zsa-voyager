@@ -8,13 +8,21 @@ Mein persönliches Keymap-Layout für das ZSA Voyager.
 
 ## Bedienung
 - **Shortcut-Layer (Layer 3):** Combo `J`+`K` oder `D`+`F`. Antippen = Layer nur für die nächste Taste, halten = Layer solange gehalten.
-- **`Alt+Tab` (Windows):** `J`+`K` halten, auf Layer 3 `G` (= `Alt`) halten und mit dem linken Daumen Tab tippen. Mit `D`+`F` liegt Alt auf `H`.
-- **`Cmd+Tab` (Mac):** Daumen halten (Ctrl → durch macOS-Tausch `Cmd`) und Combo `C`+`V` (= Tab) drücken.
+- **Modifier auf Layer 3 (Grundreihe):** `S` = Shift, `F`/`J` = Alt, `G`/`H` = Ctrl. Je nach Combo hat die freie Hand Alt unter dem Zeigefinger.
+- **`Alt+Tab` (Windows):** `J`+`K` halten, `F` (= Alt) halten und mit dem linken Daumen Tab tippen; mit `S` dazu rückwärts. Mit `D`+`F` liegt Alt auf `J`.
+- **`Cmd+Tab` (Mac):** `J`+`K` halten, `G` (Ctrl → durch macOS-Tausch `Cmd`) halten, Daumen-Tab tippen. Alternativ Daumen halten und Combo `C`+`V` (= Tab).
+- **Tab-Daumen (Tap Dance):** tippen = Tab, halten = Ctrl, zweimal tippen und halten = `Ctrl+Shift+P` (Befehlspalette).
 - **Tab ohne Daumen:** Combo `C`+`V`.
 - **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift, Timeout 185 ms).
 - **Trackpad (Navigator):** Sobald das Trackpad bewegt wird, schaltet sich Layer 4 (Auto-Mouse) ein: `R`/`V` = Linksklick, `E`/`C` = Mittelklick, `W`/`X` = Rechtsklick.
 
 ## Änderungen
+
+### 2026-10-22: Modifier auf der Grundreihe von Layer 3, Tap Dance auf dem Tab-Daumen
+- **Layer 3:** `Alt` von `G`/`H` nach `F`/`J`, `Ctrl` neu auf `G`/`H`, `Shift` neu auf `S`.
+- **Layer 3:** links oben außen `Meh` jetzt normal gehalten statt One-Shot.
+- **Tab-Daumen:** `MT(Ctrl, Tab)` → Tap Dance: tippen = Tab, halten = Ctrl, zweimal tippen = 2× Tab, zweimal tippen und halten = `Ctrl+Shift+P`.
+- **LEDs:** Farben für die neuen Modifier auf Layer 3.
 
 ### 2026-10-22: Navigator Trackpad, Shortcut-Layer erweitert
 - **Navigator Trackpad** eingebunden (Oryx-Module `zsa/navigator_trackpad` und `zsa/automouse`).
