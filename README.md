@@ -15,9 +15,19 @@ Mein persönliches Keymap-Layout für das ZSA Voyager.
 - **Tab-Daumen:** tippen = Tab, halten = Ctrl.
 - **Tab ohne Daumen:** Combo `C`+`V`.
 - **Großbuchstaben/Shift-Zeichen:** Taste länger halten (Auto Shift, Timeout 185 ms).
-- **Trackpad (Navigator):** Sobald das Trackpad bewegt wird, schaltet sich Layer 4 (Auto-Mouse) ein: `R`/`V` = Linksklick, `E`/`C` = Mittelklick, `W`/`X` = Rechtsklick.
+- **Trackpad (Navigator):** Sobald das Trackpad bewegt wird, schaltet sich Layer 4 (Auto-Mouse) für 450 ms ein: `R`/`V` = Linksklick, `E`/`C` = Mittelklick, `W`/`X` = Rechtsklick, Backspace-Daumen = Linksklick, Tab-Daumen = Ctrl. Der Space-Daumen ist dort ohne Funktion.
+- **Markieren mit Pfeiltasten:** Space halten (Layer 2), Tab-Daumen halten (= Shift), Pfeile auf `H J K L`.
+- **Browser-Tabs:** auf Layer 2 `M` = `Ctrl+Bild↑`, `.` = `Ctrl+Bild↓`.
 
 ## Änderungen
+
+### 2026-10-30: Layer 2 aufgeräumt, Medien-Layer ausgelagert, Trackpad-Daumen
+- **Layer 2:** nur noch Navigation. Neu: Shift auf dem Tab-Daumen; Tab-Wechsel mit `Ctrl+Bild↑`/`Ctrl+Bild↓` auf `M` und `.` (am Mac wird daraus durch den Ctrl/Cmd-Tausch `Cmd+Bild↑`/`Cmd+Bild↓`).
+- **Layer 5 (neu):** Medien, Lautstärke, RGB und die alten Tab-Shortcuts sind von Layer 2 hierher gezogen. Noch keine Taste führt auf diesen Layer.
+- **Layer 1:** rechts auf der Grundreihe `:` statt `+` und `P` statt `*`.
+- **Layer 4:** Tab-Daumen = Ctrl, Backspace-Daumen = Linksklick, Space-Daumen ohne Funktion.
+- **Auto-Mouse:** Timeout 450 ms.
+- **LEDs:** eigene Farben für Layer 2.
 
 ### 2026-10-22: Tap Dance auf dem Tab-Daumen wieder raus
 - **Tab-Daumen:** zurück auf `MT(Ctrl, Tab)`. Der Tap Dance hat bei schnellem `Ctrl+C` & Co. als Tab gefeuert und jedes Tab verzögert.
