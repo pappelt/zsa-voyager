@@ -152,7 +152,35 @@ bool rgb_matrix_indicators_user(void) {
 
 
 
+// Window swapper, based on Callum Oakley's swapper.c (GPL-2.0):
+// https://github.com/callum-oakley/qmk_firmware/blob/master/users/callum/swapper.c
+// Holds the modifier between consecutive presses of the trigger, until any other key event.
+static bool sw_alt_active = false;
+
+static void update_swapper(bool *active, uint16_t cmdish, uint16_t tabish, uint16_t trigger, uint16_t keycode, keyrecord_t *record) {
+  if (keycode == trigger) {
+    if (record->event.pressed) {
+      if (!*active) {
+        *active = true;
+        register_code(cmdish);
+      }
+      register_code(tabish);
+    } else {
+      unregister_code(tabish);
+    }
+  } else if (*active) {
+    unregister_code(cmdish);
+    *active = false;
+  }
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  // Trigger is the Oryx key Alt+Tab, which stays a plain Alt+Tab in builds without this code.
+  update_swapper(&sw_alt_active, KC_LALT, KC_TAB, LALT(KC_TAB), keycode, record);
+  if (keycode == LALT(KC_TAB)) {
+    return false;
+  }
+
   switch (keycode) {
   case QK_MODS ... QK_MODS_MAX:
     // Mouse and consumer keys (volume, media) with modifiers work inconsistently across operating systems,
