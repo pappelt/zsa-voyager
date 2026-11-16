@@ -157,9 +157,19 @@ bool rgb_matrix_indicators_user(void) {
 // Window swapper, based on Callum Oakley's swapper.c (GPL-2.0):
 // https://github.com/callum-oakley/qmk_firmware/blob/master/users/callum/swapper.c
 // Holds the modifier between consecutive presses of the trigger, until any other key event.
+// Exceptions: Shift keeps the switcher open (held Shift cycles backwards), Esc cancels it.
 static bool sw_alt_active = false;
 
-static void update_swapper(bool *active, uint16_t cmdish, uint16_t tabish, uint16_t trigger, uint16_t keycode, keyrecord_t *record) {
+static bool is_shift_key(uint16_t keycode) {
+  if (keycode == KC_LSFT || keycode == KC_RSFT) {
+    return true;
+  }
+  // Mod-taps with Shift on hold (MOD_RSFT includes the MOD_LSFT bit).
+  return IS_QK_MOD_TAP(keycode) && (QK_MOD_TAP_GET_MODS(keycode) & MOD_LSFT);
+}
+
+// Returns false if the swapper consumed the key event.
+static bool update_swapper(bool *active, uint16_t cmdish, uint16_t tabish, uint16_t trigger, uint16_t keycode, keyrecord_t *record) {
   if (keycode == trigger) {
     if (record->event.pressed) {
       if (!*active) {
@@ -170,16 +180,26 @@ static void update_swapper(bool *active, uint16_t cmdish, uint16_t tabish, uint1
     } else {
       unregister_code(tabish);
     }
-  } else if (*active) {
+    return false;
+  }
+  if (!*active || is_shift_key(keycode)) {
+    return true;
+  }
+  if (keycode == KC_ESC && record->event.pressed) {
+    // Esc while the modifier is still held closes the switcher without switching.
+    tap_code(KC_ESC);
     unregister_code(cmdish);
     *active = false;
+    return false;
   }
+  unregister_code(cmdish);
+  *active = false;
+  return true;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // Trigger is the Oryx key Alt+Tab, which stays a plain Alt+Tab in builds without this code.
-  update_swapper(&sw_alt_active, KC_LALT, KC_TAB, LALT(KC_TAB), keycode, record);
-  if (keycode == LALT(KC_TAB)) {
+  if (!update_swapper(&sw_alt_active, KC_LALT, KC_TAB, LALT(KC_TAB), keycode, record)) {
     return false;
   }
 
